@@ -35,6 +35,8 @@ export class TreeviewItem {
         this.value = item.value;
         if (isBoolean(item.checked)) {
             this.checked = item.checked;
+            if (item.checked == true)
+                this.setCheckedRecursive(item.checked);
         }
         if (isBoolean(item.collapsed)) {
             this.collapsed = item.collapsed;
